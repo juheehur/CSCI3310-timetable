@@ -1,47 +1,57 @@
 # Timetable App
 
-An Android app that converts timetable images into a digital format using GPT-4o.
+An Android app that converts timetable images into a digital timetable using GPT-4o.
 
-Features
-	•	Firebase-based user authentication (Login / Sign Up)
-	•	Upload and select timetable images
-	•	Image analysis via GPT-4o
-	•	Extract and display timetable data
-	•	Responsive UI design
+## Features
 
-Installation & Setup
-	1.	Clone the repository:
+- Firebase-based user authentication (Login / Sign Up)
+- Upload and select timetable images
+- Analyze images using GPT-4o
+- Extract and display timetable data
+- Responsive UI design
 
+## Installation & Setup
+
+### 1. Clone the repository
+
+```bash
 git clone https://github.com/your-username/timetable.git
 cd timetable
+```
 
+### 2. Set your OpenAI API key
 
-	2.	Set your OpenAI API key:
-	•	Add the following line to your local.properties file:
+Add the following line to your `local.properties` file:
 
+```properties
 openai.api.key=your_openai_api_key
+```
 
+### 3. Configure Firebase
 
-	3.	Configure Firebase:
-	•	Create a new project in the Firebase Console
-	•	Add an Android app with the package name com.company.timetable
-	•	Download the google-services.json file and place it in the app/ directory
-	•	Enable Email/Password authentication in Firebase Authentication
-	4.	Run the app:
-	•	Open the project in Android Studio and sync Gradle
-	•	Click the run button to launch the app
+- Go to the [Firebase Console](https://console.firebase.google.com/) and create a new project.
+- Add an Android app to the project. Use the package name: `com.company.timetable`.
+- Download the `google-services.json` file and place it in the `app/` directory.
+- In **Authentication > Sign-in method**, enable **Email/Password**.
 
-Security Notes
-	•	Never include API keys directly in the source code
-	•	Always add local.properties to your .gitignore file
-	•	In production, consider using a secure key management system or calling APIs from a backend server
+### 4. Run the app
 
-Tech Stack
-	•	Kotlin
-	•	Jetpack Compose
-	•	Firebase Authentication
-	•	Hilt (Dependency Injection)
-	•	Coroutines
-	•	Retrofit2 / OkHttp
-	•	OpenAI GPT-4o API
+- Open the project in Android Studio.
+- Sync Gradle when prompted.
+- Click the **Run** button to launch the app on an emulator or device.
 
+## Security Notes
+
+- **Never** include API keys directly in your source code.
+- Ensure that `local.properties` is listed in `.gitignore`.
+- In production, use a secure key management service or call APIs from a backend server.
+
+## Tech Stack
+
+- **Kotlin** — main programming language
+- **Jetpack Compose** — modern UI toolkit
+- **Firebase Authentication** — user login system
+- **Hilt** — dependency injection
+- **Coroutines** — asynchronous programming
+- **Retrofit2 / OkHttp** — HTTP client for networking
+- **OpenAI GPT-4o API** — for intelligent image-to-data conversion
